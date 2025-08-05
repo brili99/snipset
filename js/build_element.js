@@ -40,3 +40,10 @@ function parseHTMLString(htmlString) {
     template.innerHTML = htmlString.trim();
     return template.content.firstChild;
 }
+
+function failHandler(e) {
+    // console.log(e);
+    if (e.status == 401) {
+        window.location.href = 'login.html';
+    }
+}
